@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days System</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-vector/colorful-balloons-happy-birthday-card_1017-32692.jpg?w=2000");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 253, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            width: 30%;
+        }
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: medium;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        select#region {
+            height: 44px;
+            font-size: 19px;
+        }
+
+        select#sex {
+            height: 44px;
+            font-size: 18px;
+        }
+
+        input[type=radio] {
+            transform: scale(2);
+            margin-right: 10px;
+        }
+
+        label[for="smoker_yes"],
+        label[for="smoker_no"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Know Days Remains For Your Birthday </h1>
+
+    <form method="GET" action="/calday">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+
+        <br>
+        <br>
+
+        <br>
+        <br>
+
+        <!-- <label for="day">Birth Day:</label>
+        <input type="text" name="day" id="day"> -->
+        <div class="field-group">
+            <label>Birth Day:</label>
+            <input type="text" name="day"class="input-field" placeholder="Enter the day of month" autocomplete="off" >
+
+        <br>
+        <br>
+
+        <!-- <label for="month">Birth Month:</label>
+        <input type="text" name="month" id="month"> -->
+        <label><mark>Select Month:</mark></label>
+        <select name="month">
+            <option  value="January">Jan</option>
+            <option  value="February">Feb</option>
+            <option  value="March">Mar</option>
+            <option  value="April">April</option>
+            <option  value="May">May</option>
+            <option  value="June">June</option>
+            <option  value="July">July</option>
+            <option  value="August">Aug</option>
+            <option  value="September">Sept</option>
+            <option  value="October">Oct</option>
+            <option  value="November">Nov</option>
+            <option  value="December">Dec</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="submit" value="SUBMIT">
+
+        <!-- {% if prediction is not none %} -->
+        <br>
+        <!-- <p>Your Insurance Premium Charges will  -->
+             <b>{{ msg }}</b> </p>
+        <!-- {% endif %} -->
+
+    </form>
+
+</body>
+</html>
+           
+
+
